@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WickedWebApi", "WickedWebApi\WickedWebApi.csproj", "{FAA11390-A331-45E3-A71A-CA51AEA8FF22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WickedWebApi.Tests", "WickedWebApi.Tests\WickedWebApi.Tests.csproj", "{B8D0BCFD-1A8E-454B-ACC7-F54E694E784B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FAA11390-A331-45E3-A71A-CA51AEA8FF22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAA11390-A331-45E3-A71A-CA51AEA8FF22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAA11390-A331-45E3-A71A-CA51AEA8FF22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAA11390-A331-45E3-A71A-CA51AEA8FF22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8D0BCFD-1A8E-454B-ACC7-F54E694E784B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8D0BCFD-1A8E-454B-ACC7-F54E694E784B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8D0BCFD-1A8E-454B-ACC7-F54E694E784B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8D0BCFD-1A8E-454B-ACC7-F54E694E784B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EA40FB74-FB34-4028-A8F8-3BF2C66586D7}
+	EndGlobalSection
+EndGlobal
