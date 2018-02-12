@@ -53,6 +53,10 @@
       <Project>{68622ff4-efd8-45cb-97ad-4fd71c154635}</Project>
       <Name>WickedWebApi.BL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WickedWebApi.TL\WickedWebApi.TL.csproj">
+      <Project>{dc8f57cf-4469-4437-b82b-8ff14eac1187}</Project>
+      <Name>WickedWebApi.TL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

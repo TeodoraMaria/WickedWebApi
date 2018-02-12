@@ -46,7 +46,7 @@ namespace WickedWebApi.BL
             //cauta coloana care contine grupa
             IXLRangeColumn grupaColoana = table.DataRange.FindColumn(column =>
             {
-                grupaCell = column.Cells().First(cell => cell.GetString().Equals("Grupa"));
+                grupaCell = column.Cells()?.FirstOrDefault(cell => cell.GetString().Equals("Grupa"));
                 return grupaCell != null;
                 //return column.Cells().Any(cell => cell.GetString().Equals("Grupa"));
             });
@@ -59,11 +59,11 @@ namespace WickedWebApi.BL
 
             #endregion
 
-            table.Range(grupaCell.Address.RowNumber + 1, grupaCell.Address.ColumnNumber + 1,
+            table.Range(grupaCell.Address.RowNumber + 1, grupaCell.Address.ColumnNumber + 2,
                 table.LastCellUsed().Address.RowNumber, table.LastCellUsed().Address.ColumnNumber)
                 .CellsUsed().Where(cell=>!table.Cell(cell.Address.RowNumber,3).IsEmpty()).ForEach(cell =>
                 {
-                    string[] split = cell.ToString().Split(",".ToCharArray());
+                    string[] split = cell.GetString().Split(",".ToCharArray());
                     //Programare prog = new Programare();
 
                     string materie = split[0];
