@@ -18,8 +18,11 @@ namespace WickedWebApi.Controllers
         // GET: Students
         public ActionResult Index()
         {
-
+            var a = from b in db.Students
+                    where b.Nume == "nume" select b;
             return View(db.Students.ToList());
+            
+            //db.Students.SqlQuery("Select ")
         }
 
         // GET: Students/Details/5
