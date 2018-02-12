@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("WickedWebApi.BL")]
+[assembly: AssemblyTitle("Test")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("WickedWebApi.BL")]
+[assembly: AssemblyProduct("Test")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,11 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-<<<<<<< HEAD
-[assembly: Guid("3c4d4c8c-26bf-4867-b77e-71cc608a6809")]
-=======
-[assembly: Guid("68622ff4-efd8-45cb-97ad-4fd71c154635")]
->>>>>>> Dev-Stefan
+[assembly: Guid("5678a1b3-1d3e-4ee5-9a1a-d86eba4f1605")]
 
 // Version information for an assembly consists of the following four values:
 //
