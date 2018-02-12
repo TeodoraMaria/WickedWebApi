@@ -109,9 +109,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WickedWebApi\WickedWebApi.csproj">
+    <ProjectReference Include="..\WickedWebApi\WickedWebApi.Web.csproj">
       <Project>{FAA11390-A331-45E3-A71A-CA51AEA8FF22}</Project>
-      <Name>WickedWebApi</Name>
+      <Name>WickedWebApi.Web</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
