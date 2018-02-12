@@ -38,7 +38,7 @@ namespace WickedWebApi.BL
                 
             }*/
 
-            Orar orar = new Orar();
+            TimeTable orar = new TimeTable();
             IXLCell grupaCell = null;
 
             #region grupa
@@ -54,7 +54,7 @@ namespace WickedWebApi.BL
             //insereaza grupele care apar in excel in orar
             grupaColoana.CellsUsed().Where(cell=>!cell.GetString().Equals("Grupa")).ForEach(cell =>
             {
-                orar.Grupe.Add(new Grupa(id++,cell.GetString()));
+                orar.Groups.Add(new Group(id++,cell.GetString()));
             });
 
             #endregion

@@ -40,16 +40,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Cont.cs" />
-    <Compile Include="Models\Curs.cs" />
+    <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\Class.cs" />
     <Compile Include="Models\Enums.cs" />
-    <Compile Include="Models\Grupa.cs" />
-    <Compile Include="Models\Materie.cs" />
-    <Compile Include="Models\Misc\Corp.cs" />
-    <Compile Include="Models\Misc\LimbaStraina.cs" />
-    <Compile Include="Models\Profesor.cs" />
-    <Compile Include="Models\ProfesorProgramare.cs" />
-    <Compile Include="Models\Programare.cs" />
+    <Compile Include="Models\Group.cs" />
+    <Compile Include="Models\Subject.cs" />
+    <Compile Include="Models\Misc\Building.cs" />
+    <Compile Include="Models\Misc\ForeignLanguage.cs" />
+    <Compile Include="Models\Teacher.cs" />
+    <Compile Include="Models\TeacherClass.cs" />
+    <Compile Include="Models\Appointment.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -74,7 +74,7 @@
     <Compile Include="AccountManager\AccountManager.cs" />
     <Compile Include="AccountManager\IAccountManager.cs" />
     <Compile Include="ExcelReader.cs" />
-    <Compile Include="Orar.cs" />
+    <Compile Include="TimeTable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

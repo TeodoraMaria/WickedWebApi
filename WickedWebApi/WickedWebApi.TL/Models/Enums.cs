@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WickedWebApi.BL.Models
 {
-    public enum TipMaterie
+    public enum ClassType
     {
         Seminar,
         Curs,
