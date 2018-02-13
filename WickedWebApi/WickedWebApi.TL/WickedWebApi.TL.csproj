@@ -40,17 +40,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Account.cs" />
-    <Compile Include="Models\Class.cs" />
-    <Compile Include="Models\Enums.cs" />
-    <Compile Include="Models\Group.cs" />
-    <Compile Include="Models\Subject.cs" />
+    <Compile Include="Models\AccountDto.cs" />
+    <Compile Include="Models\ClassDto.cs" />
+    <Compile Include="Enums\ClassTypeEnum.cs" />
+    <Compile Include="Models\GroupDto.cs" />
+    <Compile Include="Models\SubjectDto.cs" />
     <Compile Include="Models\Misc\Building.cs" />
     <Compile Include="Models\Misc\ForeignLanguage.cs" />
-    <Compile Include="Models\Teacher.cs" />
-    <Compile Include="Models\TeacherClass.cs" />
-    <Compile Include="Models\Appointment.cs" />
-    <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\TeacherDto.cs" />
+    <Compile Include="Models\AppointmentDto.cs" />
+    <Compile Include="Models\StudentDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

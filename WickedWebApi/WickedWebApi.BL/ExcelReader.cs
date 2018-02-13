@@ -54,7 +54,7 @@ namespace WickedWebApi.BL
             //insereaza grupele care apar in excel in orar
             grupaColoana.CellsUsed().Where(cell=>!cell.GetString().Equals("Grupa")).ForEach(cell =>
             {
-                orar.Groups.Add(new Group(id++,cell.GetString()));
+                orar.Groups.Add(new GroupDto(id++,cell.GetString()));
             });
 
             #endregion

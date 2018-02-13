@@ -11,14 +11,14 @@ namespace WickedWebApi.BL
     {
         public TimeTable()
         {
-            Groups = new List<Group>();
-            Appointments = new List<Appointment>();
+            Groups = new List<GroupDto>();
+            Appointments = new List<AppointmentDto>();
         }
 
-        public List<Group> Groups { get; set; }
-        public List<Appointment> Appointments { get; set; }
-        public List<Subject> Subjects { get; set; }
-        public List<Teacher> Teachers { get; set; }
+        public List<GroupDto> Groups { get; set; }
+        public List<AppointmentDto> Appointments { get; set; }
+        public List<SubjectDto> Subjects { get; set; }
+        public List<TeacherDto> Teachers { get; set; }
         //public List<>
     }
 }
