@@ -23,12 +23,13 @@ namespace WickedWebApi.Controllers
            _accountManager = new AccountManager();
        }
 
-      [HttpPost]
+      [HttpGet]
       public bool CheckEmail(string email)
       {
           try
           {
               _logger.Info($"Started executing -> AccountController CheckEmail(email={email})");
+              Console.WriteLine(_accountManager.CheckEmail(email));
               return _accountManager.CheckEmail(email);
           }
           catch (Exception ex)

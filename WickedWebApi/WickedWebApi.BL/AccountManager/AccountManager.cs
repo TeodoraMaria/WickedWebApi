@@ -2,15 +2,22 @@
 
 //using WickedWebApi.DAL;
 
+using WickedWebApi.DAL.Account;
+
 namespace WickedWebApi.BL.AccountManager
 {
     public class AccountManager : IAccountManager
     {
+        private readonly IAccountRepository _accountRepository;
+
+        public AccountManager()
+        {
+            _accountRepository= new AccountRepository();
+        }
+
        public bool CheckEmail(string email)
        {
-           if (email.Contains("student"))
-               return true;
-           else return false;
+           return _accountRepository.CheckEmail(email);
        }
     }
 }
