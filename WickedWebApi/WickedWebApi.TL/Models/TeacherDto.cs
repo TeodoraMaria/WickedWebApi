@@ -8,9 +8,14 @@ namespace WickedWebApi.BL.Models
 {
     public class TeacherDto
     {
+        public TeacherDto(int id,string name)
+        {
+            Id = id;
+            Name = name;
+        }
+
         public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public string Name { get; set; }
         public AccountDto Account { get; set; }
         public IList<ClassDto> Classes { get; set; }
     }
