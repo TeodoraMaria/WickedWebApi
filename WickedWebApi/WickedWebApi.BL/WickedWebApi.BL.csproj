@@ -74,8 +74,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccountManager\AccountManager.cs" />
-    <Compile Include="AccountManager\IAccountManager.cs" />
+    <Compile Include="UserManager\UserManager.cs" />
+    <Compile Include="UserManager\IUserManager.cs" />
     <Compile Include="AppointmentExcelRead.cs" />
     <Compile Include="ExcelReader.cs" />
     <Compile Include="Logger\Logger.cs" />

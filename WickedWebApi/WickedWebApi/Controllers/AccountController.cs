@@ -15,12 +15,12 @@ namespace WickedWebApi.Controllers
    public class AccountController : Controller
    {
        private static Logger _logger;
-       private static IAccountManager _accountManager;
+       private static IUserManager _userManager;
 
        public AccountController()
        {
             _logger=new Logger();
-           _accountManager = new AccountManager();
+           _userManager = new UserManager();
        }
 
       [HttpGet]
@@ -29,8 +29,8 @@ namespace WickedWebApi.Controllers
           try
           {
               _logger.Info($"Started executing -> AccountController CheckEmail(email={email})");
-              Console.WriteLine(_accountManager.CheckEmail(email));
-              return _accountManager.CheckEmail(email);
+              Console.WriteLine(_userManager.CheckEmail(email));
+              return _userManager.CheckEmail(email);
           }
           catch (Exception ex)
           {

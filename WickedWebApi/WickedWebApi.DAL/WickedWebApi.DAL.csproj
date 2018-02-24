@@ -41,11 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account\AccountRepository.cs" />
-    <Compile Include="Account\IAccountRepository.cs" />
+    <Compile Include="Account\UserRepository.cs" />
+    <Compile Include="Account\IUserRepository.cs" />
     <Compile Include="DatabaseProvider.cs" />
     <Compile Include="DatabaseRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WickedWebApi.TL\WickedWebApi.TL.csproj">
+      <Project>{DC8F57CF-4469-4437-B82B-8FF14EAC1187}</Project>
+      <Name>WickedWebApi.TL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
