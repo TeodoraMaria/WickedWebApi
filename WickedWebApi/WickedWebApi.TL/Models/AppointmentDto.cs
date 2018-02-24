@@ -13,7 +13,7 @@ namespace WickedWebApi.BL.Models
         {
         }
 
-        public AppointmentDto(int id, ClassDto curs, TeacherDto profesor, string day,string hours ,Building corp, string sala, GroupDto grupa)
+        public AppointmentDto(int id, ClassDto curs, TeacherDto teacher, string day,string hours ,string corp, string sala, GroupDto grupa)
         {
             Id = id;
             Class = curs;
@@ -28,9 +28,10 @@ namespace WickedWebApi.BL.Models
         public ClassDto Class { get; set; }
         public string Day { get; set; }
         public string Hours { get; set; }
-        public Building Corp { get; set; }
+        public string Corp { get; set; }
         public string ClassRoom { get; set; }
         public GroupDto Group { get; set; }
+        public TeacherDto Teacher { get; set; }
     }
 
   
