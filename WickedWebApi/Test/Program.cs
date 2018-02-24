@@ -19,7 +19,7 @@ namespace Test
         /// </param>
         private static void Main(string[] args)
         {
-            ExcelReader.ReadFromXml("C:\\Users\\Ferret\\Desktop\\Orare\\Orara_sem_I-2017-2018_V9.xlsx");
+            ExcelReader.ReadGroupDto("C:\\Users\\Ferret\\Desktop\\GrupeStudenti (1).xlsx");
 
         }
     }

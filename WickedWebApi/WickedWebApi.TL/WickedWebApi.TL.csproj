@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\GroupTable.cs" />
+    <Compile Include="Common\TimeTable.cs" />
     <Compile Include="Models\AccountDto.cs" />
     <Compile Include="Models\ClassDto.cs" />
     <Compile Include="Enums\ClassTypeEnum.cs" />
@@ -52,5 +54,6 @@
     <Compile Include="Models\StudentDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

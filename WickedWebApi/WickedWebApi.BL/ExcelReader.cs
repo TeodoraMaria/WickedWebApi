@@ -8,6 +8,8 @@ using OfficeOpenXml.FormulaParsing.Utilities;
 using OfficeOpenXml.Table;
 using WickedWebApi.BL.Models;
 using WickedWebApi.BL.Models.Misc;
+using WickedWebApi.TL.Common;
+using WickedWebApi.TL.Commun;
 
 namespace WickedWebApi.BL
 {
@@ -23,7 +25,7 @@ namespace WickedWebApi.BL
     public class ExcelReader
     {
       
-        public static TimeTable ReadFromXml(string filePath)
+        public static TimeTable ReadTimeTable(string filePath)
         {
             FileInfo fileInfo = new FileInfo(filePath);
 
@@ -169,6 +171,31 @@ namespace WickedWebApi.BL
             return null;
 
         }
+
+        public static GroupTable ReadGroupDto(string filePath)
+        {
+
+            FileInfo fileInfo = new FileInfo(filePath);
+
+            using (ExcelPackage package = new ExcelPackage(fileInfo))
+            {
+                ExcelWorksheet excelWorksheet = package.Workbook.Worksheets.First();
+                if (excelWorksheet == null) return null;
+
+                List<AccountDto> accountDtos = excelWorksheet.Extract<AccountDto>().WithProperty(p => p.Email, "C")
+                    .GetData(8, i => !string.IsNullOrEmpty(excelWorksheet.Cells[i, 3].Text)).ToList();
+                string groupName = excelWorksheet.Cells[5,1].Text;
+                groupName = groupName.Split(":".ToCharArray()).First(g=> g.Contains("anul")).Split(",".ToCharArray()).First().Replace(" ","");
+                GroupTable groupTable = new GroupTable(groupName);
+                accountDtos.ForEach(account=> groupTable.AddStudent(new StudentDto(account)));
+                //groupTable.GroupDto = new GroupDto(-1,);
+
+            }
+
+            return null;
+        }
+
+      
 
         private static string GoUp(ExcelWorksheet excelWorksheet, int startingRow,int column)
         {

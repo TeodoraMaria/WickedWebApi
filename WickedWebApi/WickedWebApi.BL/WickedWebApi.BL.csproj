@@ -80,7 +80,6 @@
     <Compile Include="ExcelReader.cs" />
     <Compile Include="Logger\Logger.cs" />
     <Compile Include="RowAppointments.cs" />
-    <Compile Include="TimeTable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
