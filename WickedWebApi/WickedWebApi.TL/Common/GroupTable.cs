@@ -19,6 +19,7 @@ namespace WickedWebApi.TL.Common
             GroupDto = new GroupDto(-1,groupName);
         }
 
+        public int NumberOfStudents { get; set; }
         public List<StudentDto> StudentDtos { get; set; }
         public GroupDto GroupDto { get; set; }
 

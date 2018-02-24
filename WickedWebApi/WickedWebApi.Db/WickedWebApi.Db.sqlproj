@@ -65,6 +65,15 @@
   <ItemGroup>
     <Build Include="dbo\Tables\Account.sql" />
     <Build Include="dbo\StoredProcedures\CheckEmail.sql" />
+    <Build Include="dbo\Tables\Group.sql" />
+    <Build Include="dbo\Tables\Student.sql" />
+    <Build Include="dbo\Tables\Teacher.sql" />
+    <Build Include="dbo\Tables\Appointment.sql" />
+    <Build Include="dbo\Tables\Class.sql" />
+    <Build Include="dbo\Tables\Subject.sql" />
+    <Build Include="dbo\StoredProcedures\AddStudent.sql" />
+    <Build Include="dbo\StoredProcedures\AddAccount.sql" />
+    <Build Include="dbo\StoredProcedures\AddGroup.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Updates\WickedDatabase1.sql" />

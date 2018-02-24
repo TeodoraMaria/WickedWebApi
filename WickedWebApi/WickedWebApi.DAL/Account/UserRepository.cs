@@ -14,7 +14,7 @@ namespace WickedWebApi.DAL.Account
             using (SqlConnection connection = DatabaseProvider.GetSqlConnection())
             {
                 SqlParameter parameter =new SqlParameter("@email", email);
-
+                
                 using (IDataReader reader =
                     DatabaseProvider.ExecuteCommand<IDataReader>(connection, CHECKEMAIL, CommandType.StoredProcedure, parameter))
                 {

@@ -10,5 +10,6 @@ namespace WickedWebApi.BL.ScheduleManager
     public interface IScheduleManager
     {
         AppointmentDto GetCurrentAppointment(StudentDto studentDto);
+        void ReadGroups(string path);
     }
 }

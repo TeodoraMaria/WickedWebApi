@@ -45,6 +45,8 @@
     <Compile Include="Account\IUserRepository.cs" />
     <Compile Include="DatabaseProvider.cs" />
     <Compile Include="DatabaseRepository.cs" />
+    <Compile Include="DbPop\IPopulateRepository.cs" />
+    <Compile Include="DbPop\PopulateRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

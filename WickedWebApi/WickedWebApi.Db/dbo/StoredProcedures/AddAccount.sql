@@ -4,6 +4,8 @@
 	@isAdmin int
 AS
 BEGIN
-	INSERT INTO Account(Email, Password, IsAdmin)
+	INSERT INTO Account([Email], [Password], [IsAdmin])
 	VALUES(@email, @password, @isAdmin)
+
+	SELECT SCOPE_IDENTITY as Idz
 END

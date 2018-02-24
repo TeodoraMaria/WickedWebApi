@@ -78,10 +78,8 @@
     <Compile Include="ScheduleManager\ScheduleManager.cs" />
     <Compile Include="UserManager\UserManager.cs" />
     <Compile Include="UserManager\IUserManager.cs" />
-    <Compile Include="AppointmentExcelRead.cs" />
     <Compile Include="ExcelReader.cs" />
     <Compile Include="Logger\Logger.cs" />
-    <Compile Include="RowAppointments.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
