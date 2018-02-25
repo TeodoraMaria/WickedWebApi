@@ -76,9 +76,16 @@
     <Build Include="dbo\StoredProcedures\AddGroup.sql" />
     <Build Include="dbo\Tables\ForeignLanguage.sql" />
     <Build Include="dbo\StoredProcedures\AddAppointment.sql" />
+<<<<<<< HEAD
     <Build Include="dbo\StoredProcedures\AddSubject.sql" />
     <Build Include="dbo\StoredProcedures\AddClass.sql" />
     <Build Include="dbo\StoredProcedures\AddTeacher.sql" />
+=======
+    <Build Include="dbo\StoredProcedures\LogIn.sql" />
+    <Build Include="dbo\StoredProcedures\Register.sql" />
+    <Build Include="dbo\StoredProcedures\GetForeignLanguage.sql" />
+    <Build Include="dbo\StoredProcedures\InsertForeignLanguage.sql" />
+>>>>>>> ddb1457113f7911a5ff922e1c8036d8d7ab584ad
   </ItemGroup>
   <ItemGroup>
     <None Include="Updates\WickedDatabase1.sql" />
