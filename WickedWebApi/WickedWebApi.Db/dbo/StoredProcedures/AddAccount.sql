@@ -7,5 +7,5 @@ BEGIN
 	INSERT INTO Account([Email], [Password], [IsAdmin])
 	VALUES(@email, @password, @isAdmin)
 
-	SELECT SCOPE_IDENTITY as Idz
+	SELECT SCOPE_IDENTITY() as Id
 END

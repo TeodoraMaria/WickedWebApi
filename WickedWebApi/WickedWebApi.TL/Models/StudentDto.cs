@@ -8,6 +8,7 @@ namespace WickedWebApi.BL.Models
         public StudentDto(AccountDto account)
         {
             Account = account;
+            ForeignLanguage = new ForeignLanguage();
         }
 
        

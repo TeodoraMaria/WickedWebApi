@@ -74,8 +74,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ScheduleManager\IScheduleManager.cs" />
-    <Compile Include="ScheduleManager\ScheduleManager.cs" />
+    <Compile Include="PopulateManager\IScheduleManager.cs" />
+    <Compile Include="PopulateManager\IStudentsPopManager.cs" />
+    <Compile Include="PopulateManager\ScheduleManager.cs" />
+    <Compile Include="PopulateManager\StudentsPopManager.cs" />
     <Compile Include="UserManager\UserManager.cs" />
     <Compile Include="UserManager\IUserManager.cs" />
     <Compile Include="ExcelReader.cs" />

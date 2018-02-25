@@ -10,5 +10,7 @@ namespace WickedWebApi.DAL.DbPop
     public interface IPopulateRepository
     {
         int AddGroup(GroupDto group);
+        int AddAccount(AccountDto accountDto);
+        void AddStudent(StudentDto studentDto);
     }
 }
