@@ -76,6 +76,9 @@
     <Build Include="dbo\StoredProcedures\AddGroup.sql" />
     <Build Include="dbo\Tables\ForeignLanguage.sql" />
     <Build Include="dbo\StoredProcedures\AddAppointment.sql" />
+    <Build Include="dbo\StoredProcedures\AddSubject.sql" />
+    <Build Include="dbo\StoredProcedures\AddClass.sql" />
+    <Build Include="dbo\StoredProcedures\AddTeacher.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Updates\WickedDatabase1.sql" />

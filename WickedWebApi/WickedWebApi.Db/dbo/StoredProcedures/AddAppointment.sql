@@ -1,6 +1,12 @@
 ﻿CREATE PROCEDURE [dbo].[AddAppointment]
-	@param1 int = 0,
-	@param2 int
+	@class int,
+	@day int,
+	@hour int,
+	@classroom int,
+	@group int,
+	@teacher int
 AS
-	SELECT @param1, @param2
-RETURN 0
+BEGIN
+	INSERT INTO Appointment
+	VALUES(@class, @day, @hour, @classroom, @group, @teacher)
+END

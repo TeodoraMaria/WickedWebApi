@@ -12,5 +12,8 @@ namespace WickedWebApi.DAL.DbPop
         int AddGroup(GroupDto group);
         int AddAccount(AccountDto accountDto);
         void AddStudent(StudentDto studentDto);
+        int AddSubject(SubjectDto subject);
+        int AddClass(ClassDto classDto);
+        int AddTeacher(TeacherDto teacher);
     }
 }

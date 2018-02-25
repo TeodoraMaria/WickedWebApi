@@ -27,6 +27,7 @@ namespace WickedWebApi.BL
         public static TimeTable ReadTimeTable(string filePath)
         {
             FileInfo fileInfo = new FileInfo(filePath);
+            TimeTable timeTable = new TimeTable();
 
             using (ExcelPackage package = new ExcelPackage(fileInfo))
             {
@@ -114,7 +115,7 @@ namespace WickedWebApi.BL
                     .WithCollectionProperty(p => p.AppointmentExcelReads, item => item.AppointmentDate, 7,
                         item => item.AppointmentString, "E", "AK").GetData(8,300).ToList();
 
-                TimeTable timeTable = new TimeTable();
+                
 
                 timeTable.Groups = groupDtos;
                 
@@ -166,7 +167,7 @@ namespace WickedWebApi.BL
 
             }
 
-            return null;
+            return timeTable;
 
         }
 

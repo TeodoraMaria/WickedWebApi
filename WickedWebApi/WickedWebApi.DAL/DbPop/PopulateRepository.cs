@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WickedWebApi.BL.Models;
 
 namespace WickedWebApi.DAL.DbPop
@@ -14,9 +9,89 @@ namespace WickedWebApi.DAL.DbPop
         private const string ADDGROUP = "AddGroup";
         private const string ADDACCOUNT = "AddAccount";
         private const string ADDSTUDENT = "AddStudent";
+        private const string ADDSUBJECT = "AddSubject";
+        private const string ADDCLASS = "AddClass";
+        private const string ADDTEACHER = "AddTeacher";
+
+        public int AddTeacher(TeacherDto teacher)
+        {
+            using(SqlConnection connection = DatabaseProvider.GetSqlConnection())
+            {
+                SqlParameter[] parameters = { new SqlParameter("@name", teacher.Name), new SqlParameter("@account", teacher.Account.Id) };
+
+                using (IDataReader reader =
+                   DatabaseProvider.ExecuteCommand<IDataReader>(connection, ADDTEACHER, CommandType.StoredProcedure, parameters))
+                {
+                    if (reader.Read())
+                    {
+
+                        return int.Parse(reader["Id"].ToString());
+                    }
+                    return 0;
+                }
+            }
+        }
+
+        public int AddClass(ClassDto classDto)
+        {
+            using (SqlConnection connection = DatabaseProvider.GetSqlConnection())
+            {
+                int type = 0;
+                switch (classDto.ClassType)
+                {
+                    case ClassTypeEnum.S:
+                        type = 1;
+                        break;
+                    case ClassTypeEnum.C:
+                        type = 2;
+                        break;
+                    case ClassTypeEnum.L:
+                        type = 3;
+                        break;
+                    case ClassTypeEnum.E:
+                        type = 4;
+                        break;
+                    default:
+                        break;
+                }
+
+                SqlParameter[] parameters = { new SqlParameter("@subject", classDto.Subject.Id), new SqlParameter("@type", type) };
 
 
-        public int AddGroup(GroupDto @group)
+                using (IDataReader reader =
+                    DatabaseProvider.ExecuteCommand<IDataReader>(connection, ADDCLASS, CommandType.StoredProcedure, parameters))
+                {
+                    if (reader.Read())
+                    {
+
+                        return int.Parse(reader["Id"].ToString());
+                    }
+                    return 0;
+                }
+            }
+        }
+
+        public int AddSubject(SubjectDto subject)
+        {
+            using (SqlConnection connection = DatabaseProvider.GetSqlConnection())
+            {
+                SqlParameter parameter = new SqlParameter("@name", subject.Name);
+
+
+                using (IDataReader reader =
+                    DatabaseProvider.ExecuteCommand<IDataReader>(connection, ADDSUBJECT, CommandType.StoredProcedure, parameter))
+                {
+                    if (reader.Read())
+                    {
+
+                        return int.Parse(reader["Id"].ToString());
+                    }
+                    return 0;
+                }
+            }
+        }
+
+        public int AddGroup(GroupDto group)
         {
             using (SqlConnection connection = DatabaseProvider.GetSqlConnection())
             {

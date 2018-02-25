@@ -23,6 +23,7 @@ namespace WickedWebApi.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public ActionResult UploadGroupTable(HttpPostedFileBase file)
         {
@@ -42,8 +43,7 @@ namespace WickedWebApi.Controllers
             string path = Path.Combine(Server.MapPath("~/App_Data/"), fileName);
             file.SaveAs(path);
 
-            GroupTable groupTable = _studentsPopManager.ReadGroups(path);
-            _studentsPopManager.AddGroups(groupTable);
+            TimeTable timeTable = _scheduleManager.ReadScheduleTable(path);
             return RedirectToAction("Index", "Home");
         }
     }
