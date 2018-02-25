@@ -43,6 +43,46 @@ namespace WickedWebApi.Controllers
           }
       }
 
+       [HttpGet]
+       public int LogIn(string email,string password)
+       {
+           try
+           {
+               _logger.Info($"Started executing -> AccountController LogIn(email={email},password={password})");
+               Console.WriteLine(_userManager.CheckEmail(email));
+               return _userManager.LogIn(email,password);
+           }
+           catch (Exception ex)
+           {
+               _logger.Error(ex.Message);
+               return 0;
+           }
+           finally
+           {
+               _logger.Info($"Finished executing -> AccountController LogIn(email={email},password={password})");
+           }
+       }
 
-   }
+       [HttpGet]
+       public int Register(string email, string password,string foreignLanguage)
+       {
+           try
+           {
+               _logger.Info($"Started executing -> AccountController Register(email={email},password={password},foreignLanguage={foreignLanguage})");
+               Console.WriteLine(_userManager.CheckEmail(email));
+               return _userManager.Register(email, password,foreignLanguage);
+           }
+           catch (Exception ex)
+           {
+               _logger.Error(ex.Message);
+               return 0;
+           }
+           finally
+           {
+               _logger.Info($"Finished executing -> AccountController Register(email={email},password={password},foreignLanguage={foreignLanguage})");
+           }
+       }
+
+
+    }
 }
