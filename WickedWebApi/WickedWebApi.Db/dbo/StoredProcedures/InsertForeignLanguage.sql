@@ -4,4 +4,6 @@ CREATE PROCEDURE [dbo].[InsertForeignLanguage]
 AS
 BEGIN
   INSERT INTO ForeignLanguage (Name) VALUES (@foreignLanguage);
+
+  SELECT SCOPE_IDENTITY()
 END
