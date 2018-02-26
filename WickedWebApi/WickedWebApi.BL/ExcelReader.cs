@@ -9,7 +9,6 @@ using OfficeOpenXml.Table;
 using WickedWebApi.BL.Models;
 using WickedWebApi.BL.Models.Misc;
 using WickedWebApi.TL.Common;
-using WickedWebApi.TL.Commun;
 
 namespace WickedWebApi.BL
 {
@@ -28,6 +27,7 @@ namespace WickedWebApi.BL
         public static TimeTable ReadTimeTable(string filePath)
         {
             FileInfo fileInfo = new FileInfo(filePath);
+            TimeTable timeTable = new TimeTable();
 
             using (ExcelPackage package = new ExcelPackage(fileInfo))
             {
@@ -42,9 +42,8 @@ namespace WickedWebApi.BL
 
                 tempGroupDtos.ForEach(group =>
                 {
-                    group.SemiGroup = "A";
                     groupDtos.Add(group);
-                    GroupDto groupB = new GroupDto(group.Id,group.Name,"B");
+                    GroupDto groupB = new GroupDto(group.Id,group.Name);
                     groupDtos.Add(groupB);
                 });
 
@@ -116,7 +115,7 @@ namespace WickedWebApi.BL
                     .WithCollectionProperty(p => p.AppointmentExcelReads, item => item.AppointmentDate, 7,
                         item => item.AppointmentString, "E", "AK").GetData(8,300).ToList();
 
-                TimeTable timeTable = new TimeTable();
+                
 
                 timeTable.Groups = groupDtos;
                 
@@ -124,7 +123,7 @@ namespace WickedWebApi.BL
                 rowAppointmentses.ForEach(rowAppointment =>
                 {
                     GroupDto groupDto = groupDtos.Find(group =>
-                        group.Name.Equals(rowAppointment.Group) && group.SemiGroup.Equals(rowAppointment.SemiGroup));
+                        group.Name.Equals(rowAppointment.Group) );
                     
                     rowAppointment.AppointmentExcelReads.Where(ap=> ap.AppointmentString!=null).ToList().ForEach(appointment =>
                     {
@@ -160,7 +159,7 @@ namespace WickedWebApi.BL
                             teacherDto = new TeacherDto(timeTable.Teachers.Count,split[3]);
                             timeTable.Teachers.Add(teacherDto);
                         }
-                        AppointmentDto appointmentDTO = new AppointmentDto(timeTable.Appointments.Count,classDto ,teacherDto,date[0],date[1] , new Building(),ClassRoom,groupDto );
+                        AppointmentDto appointmentDTO = new AppointmentDto(timeTable.Appointments.Count,classDto ,teacherDto,date[0],date[1] , "p",ClassRoom,groupDto );
                         timeTable.Appointments.Add(appointmentDTO);
                     });
                 });
@@ -168,7 +167,7 @@ namespace WickedWebApi.BL
 
             }
 
-            return null;
+            return timeTable;
 
         }
 
@@ -187,12 +186,13 @@ namespace WickedWebApi.BL
                 string groupName = excelWorksheet.Cells[5,1].Text;
                 groupName = groupName.Split(":".ToCharArray()).First(g=> g.Contains("anul")).Split(",".ToCharArray()).First().Replace(" ","");
                 GroupTable groupTable = new GroupTable(groupName);
+                int id = 0;
                 accountDtos.ForEach(account=> groupTable.AddStudent(new StudentDto(account)));
                 //groupTable.GroupDto = new GroupDto(-1,);
 
+                return groupTable;
             }
 
-            return null;
         }
 
       

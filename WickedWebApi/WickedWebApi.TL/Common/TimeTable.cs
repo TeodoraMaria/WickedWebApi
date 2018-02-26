@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using WickedWebApi.BL.Models;
 
-namespace WickedWebApi.TL.Commun
+namespace WickedWebApi.TL.Common
 {
     public class TimeTable
     {

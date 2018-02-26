@@ -8,6 +8,11 @@ namespace WickedWebApi.BL.Models.Misc
 {
     public class ForeignLanguage
     {
+        public ForeignLanguage()
+        {
+            Id = 0;
+        }
+
         public int Id { get; set; }
         public string Name { get; set; }
 

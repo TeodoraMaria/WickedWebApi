@@ -65,6 +65,25 @@
   <ItemGroup>
     <Build Include="dbo\Tables\Account.sql" />
     <Build Include="dbo\StoredProcedures\CheckEmail.sql" />
+    <Build Include="dbo\Tables\Group.sql" />
+    <Build Include="dbo\Tables\Student.sql" />
+    <Build Include="dbo\Tables\Teacher.sql" />
+    <Build Include="dbo\Tables\Appointment.sql" />
+    <Build Include="dbo\Tables\Class.sql" />
+    <Build Include="dbo\Tables\Subject.sql" />
+    <Build Include="dbo\StoredProcedures\AddStudent.sql" />
+    <Build Include="dbo\StoredProcedures\AddAccount.sql" />
+    <Build Include="dbo\StoredProcedures\AddGroup.sql" />
+    <Build Include="dbo\Tables\ForeignLanguage.sql" />
+    <Build Include="dbo\StoredProcedures\AddAppointment.sql" />
+    <Build Include="dbo\StoredProcedures\AddSubject.sql" />
+    <Build Include="dbo\StoredProcedures\AddClass.sql" />
+    <Build Include="dbo\StoredProcedures\AddTeacher.sql" />
+    <Build Include="dbo\StoredProcedures\LogIn.sql" />
+    <Build Include="dbo\StoredProcedures\Register.sql" />
+    <Build Include="dbo\StoredProcedures\GetForeignLanguageByName.sql" />
+    <Build Include="dbo\StoredProcedures\InsertForeignLanguage.sql" />
+    <Build Include="dbo\StoredProcedures\GetLanguageById.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Updates\WickedDatabase1.sql" />

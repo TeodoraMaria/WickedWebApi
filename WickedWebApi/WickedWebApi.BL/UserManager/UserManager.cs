@@ -21,14 +21,24 @@ namespace WickedWebApi.BL.AccountManager
            return _accountRepository.CheckEmail(email);
        }
 
-        public void PopulateDbFromGroupTable(GroupTable groupTable)
+        public int LogIn(string email, string password)
+        {
+            return _accountRepository.LogIn(email, password);
+        }
+
+        public int Register(string email, string password, string foreignLanguage)
+        {
+            return _accountRepository.Register(email, password, foreignLanguage);
+        }
+
+       /* public void PopulateDbFromGroupTable(GroupTable groupTable)
         {
             groupTable.StudentDtos.ForEach(student=>
             {
                 int id =_accountRepository.AddAccount(student.Account);
 
             });
-        }
+        }*/
 
         
     }

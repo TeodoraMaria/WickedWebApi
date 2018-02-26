@@ -40,7 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\AppointmentExcelRead.cs" />
     <Compile Include="Common\GroupTable.cs" />
+    <Compile Include="Common\RowAppointments.cs" />
     <Compile Include="Common\TimeTable.cs" />
     <Compile Include="Models\AccountDto.cs" />
     <Compile Include="Models\ClassDto.cs" />

@@ -8,10 +8,10 @@ namespace WickedWebApi.BL.Models
 {
     public enum ClassTypeEnum
     {
-        S,
-        C,
-        L,
-        E,
+        S =1,
+        C =2,
+        L =3,
+        E =4,
         
     }
 
