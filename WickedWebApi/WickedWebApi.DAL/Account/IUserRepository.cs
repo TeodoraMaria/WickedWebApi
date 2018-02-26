@@ -9,6 +9,8 @@ namespace WickedWebApi.DAL.Account
 
         int AddAccount(AccountDto accountDto);
         int LogIn(string email, string password);
-        int Register(string email, string password, string foreignLanguage);
+        int Register(string email, string password, int foreignLanguage);
+        int GetForeignLanguageByName(string foreignLanguage);
+
     }
 }
