@@ -74,6 +74,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PasswordHashing.cs" />
     <Compile Include="PopulateManager\IScheduleManager.cs" />
     <Compile Include="PopulateManager\IStudentsPopManager.cs" />
     <Compile Include="PopulateManager\ScheduleManager.cs" />

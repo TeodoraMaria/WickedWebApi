@@ -49,7 +49,7 @@ namespace WickedWebApi.Controllers
            try
            {
                _logger.Info($"Started executing -> AccountController LogIn(email={email},password={password})");
-               Console.WriteLine(_userManager.CheckEmail(email));
+               //Console.WriteLine(_userManager.CheckEmail(email));
                return _userManager.LogIn(email,password);
            }
            catch (Exception ex)
@@ -69,7 +69,7 @@ namespace WickedWebApi.Controllers
            try
            {
                _logger.Info($"Started executing -> AccountController Register(email={email},password={password},foreignLanguage={foreignLanguage})");
-               Console.WriteLine(_userManager.CheckEmail(email));
+               //Console.WriteLine(_userManager.CheckEmail(email));
                return _userManager.Register(email, password,foreignLanguage);
            }
            catch (Exception ex)

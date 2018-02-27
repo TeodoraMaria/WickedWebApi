@@ -4,7 +4,7 @@
 	@foreignLanguage int
 AS
 BEGIN
-DECLARE @id int
+DECLARE @id int = -1
 UPDATE
     Account
 SET
@@ -13,14 +13,14 @@ SET
 FROM Account
 WHERE
 	  [Email]=@email AND [Password] IS NULL
-
+	
+	if(@id Like -1)RETURN 0;
 
 UPDATE
   Student
 SET
   Student.ForeignLanguage = @foreignLanguage
-FROM (SELECT Top 1 Student.ForeignLanguage 
-	  FROM Student
-      WHERE Student.Account = @id) al
-  RETURN @id;
+FROM Student
+Where Student.Account = @id
+	Select @id as Id;
 END

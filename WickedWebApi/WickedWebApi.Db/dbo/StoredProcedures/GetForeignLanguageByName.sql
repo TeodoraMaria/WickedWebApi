@@ -3,7 +3,7 @@ CREATE PROCEDURE [dbo].[GetForeignLanguageByName]
 	@foreignLanguage nvarchar(50)
 AS
 BEGIN
-	SELECT * 
+	SELECT Id 
 	FROM ForeignLanguage
 	WHERE Name=@foreignLanguage
 END

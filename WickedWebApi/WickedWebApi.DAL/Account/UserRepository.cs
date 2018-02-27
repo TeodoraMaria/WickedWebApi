@@ -9,6 +9,7 @@ namespace WickedWebApi.DAL.Account
         private const string CHECKEMAIL = "CheckEmail";
         private const string LOGIN = "LogIn";
         private const string REGISTER = "Register";
+        private const string GETFOREIGNLANGUAGEBYNAME = "GetForeignLanguageByName";
 
 
         public bool CheckEmail(string email)
@@ -47,7 +48,7 @@ namespace WickedWebApi.DAL.Account
             return -1;
         }
 
-        public int Register(string email, string password,string foreignLanguage)
+        public int Register(string email, string password,int foreignLanguage)
         {
             using (SqlConnection connection = DatabaseProvider.GetSqlConnection())
             {
@@ -64,6 +65,26 @@ namespace WickedWebApi.DAL.Account
             }
             return -1;
         }
+
+
+        public int GetForeignLanguageByName(string foreignLanguage)
+        {
+            using (SqlConnection connection = DatabaseProvider.GetSqlConnection())
+            {
+                SqlParameter parameter = new SqlParameter("@foreignLanguage", foreignLanguage);
+
+                using (IDataReader reader =
+                    DatabaseProvider.ExecuteCommand<IDataReader>(connection, GETFOREIGNLANGUAGEBYNAME, CommandType.StoredProcedure, parameter))
+                {
+                    if (reader.Read())
+                    {
+                        return (int)reader["id"];
+                    }
+                }
+            }
+            return -1;
+        }
+
 
         public int AddAccount(AccountDto accountDto)
         {
