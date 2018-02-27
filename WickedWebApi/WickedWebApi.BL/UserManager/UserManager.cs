@@ -23,12 +23,20 @@ namespace WickedWebApi.BL.AccountManager
 
         public int LogIn(string email, string password)
         {
+            password = PasswordHashing.Hash(password);
             return _accountRepository.LogIn(email, password);
         }
 
         public int Register(string email, string password, string foreignLanguage)
         {
-            return _accountRepository.Register(email, password, foreignLanguage);
+            int foreignLanguageId = GetForeignLanguageByName(foreignLanguage);
+            password = PasswordHashing.Hash(password);
+            return _accountRepository.Register(email, password, foreignLanguageId);
+        }
+
+        public int GetForeignLanguageByName(string foreignLanguage)
+        {
+            return _accountRepository.GetForeignLanguageByName(foreignLanguage);
         }
 
        /* public void PopulateDbFromGroupTable(GroupTable groupTable)
