@@ -2,8 +2,8 @@
 (
 	[Id] INT NOT NULL IDENTITY(1,1) PRIMARY KEY, 
     [Class] INT NOT NULL, 
-    [Day] INT NOT NULL, 
-    [Hours] INT NOT NULL, 
+    [Day] NVARCHAR(50) NOT NULL, 
+    [Hours] NVARCHAR(50) NOT NULL, 
     [ClassRoom] NVARCHAR(20) NOT NULL, 
     [Group] INT NOT NULL, 
     [Teacher] INT NOT NULL, 

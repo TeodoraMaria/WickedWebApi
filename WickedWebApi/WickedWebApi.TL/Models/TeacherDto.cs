@@ -12,6 +12,7 @@ namespace WickedWebApi.BL.Models
         {
             Id = id;
             Name = name;
+            Account = new AccountDto();
         }
 
         public int Id { get; set; }
