@@ -2,12 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\WickedWebApi",
-    "\\WickedWebApi\\WickedWebApi.BL",
-    "\\WickedWebApi\\WickedWebApi.BL\\ScheduleManager",
     "\\WickedWebApi\\WickedWebApi.Db",
     "\\WickedWebApi\\WickedWebApi.Db\\dbo",
     "\\WickedWebApi\\WickedWebApi.Db\\dbo\\Tables"
   ],
-  "SelectedNode": "\\WickedWebApi\\WickedWebApi.BL\\WickedWebApi.BL.csproj",
+  "SelectedNode": "\\WickedWebApi\\WickedWebApi.sln",
   "PreviewInSolutionExplorer": false
 }
