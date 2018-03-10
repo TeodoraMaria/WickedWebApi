@@ -42,9 +42,10 @@ namespace WickedWebApi.BL
 
                 tempGroupDtos.ForEach(group =>
                 {
+                    if (group.Name == "Grupa") return;
                     groupDtos.Add(group);
-                    GroupDto groupB = new GroupDto(group.Id,group.Name);
-                    groupDtos.Add(groupB);
+                    /*GroupDto groupB = new GroupDto(group.Id,group.Name);
+                    groupDtos.Add(groupB);*/
                 });
 
 
@@ -153,10 +154,10 @@ namespace WickedWebApi.BL
 
                         date[0] = date[0] +" "+ split[4];
 
-                        TeacherDto teacherDto = timeTable.Teachers.FirstOrDefault(teacher=> teacher.Name.Equals(split[3]));
+                        TeacherDto teacherDto = timeTable.Teachers.FirstOrDefault(teacher=> teacher.Name.Equals(split[3].Replace(" ","")));
                         if (teacherDto == null)
                         {
-                            teacherDto = new TeacherDto(timeTable.Teachers.Count,split[3]);
+                            teacherDto = new TeacherDto(timeTable.Teachers.Count,split[3].Replace(" ",""));
                             timeTable.Teachers.Add(teacherDto);
                         }
                         AppointmentDto appointmentDTO = new AppointmentDto(timeTable.Appointments.Count,classDto ,teacherDto,date[0],date[1] , "p",ClassRoom,groupDto );

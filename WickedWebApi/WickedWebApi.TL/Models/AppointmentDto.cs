@@ -22,6 +22,7 @@ namespace WickedWebApi.BL.Models
             Corp = corp;
             ClassRoom = sala;
             Group = grupa;
+            Teacher = teacher;
         }
 
         public int Id { get; set; }

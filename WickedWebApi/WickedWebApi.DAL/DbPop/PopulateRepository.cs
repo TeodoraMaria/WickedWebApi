@@ -12,6 +12,53 @@ namespace WickedWebApi.DAL.DbPop
         private const string ADDSUBJECT = "AddSubject";
         private const string ADDCLASS = "AddClass";
         private const string ADDTEACHER = "AddTeacher";
+        private const string ADDAPPOINTMENT = "AddAppointment";
+
+        private const string GETACCOUNTIDBYTEACHERNAME = "GetAccountByTeacherName";
+
+        public int GetAccountIdByTeacherName(string name)
+        {
+            using (SqlConnection connection = DatabaseProvider.GetSqlConnection())
+            {
+                SqlParameter parameters =  new SqlParameter("@teacherName", name);
+
+                using (IDataReader reader =
+                    DatabaseProvider.ExecuteCommand<IDataReader>(connection, GETACCOUNTIDBYTEACHERNAME, CommandType.StoredProcedure, parameters))
+                {
+                    if (reader.Read())
+                    {
+
+                        return int.Parse(reader["Id"].ToString());
+                    }
+                    return 0;
+                }
+            }
+        }
+
+
+        public int AddAppointment(AppointmentDto appointmentDto)
+        {
+            using (SqlConnection connection = DatabaseProvider.GetSqlConnection())
+            {
+                SqlParameter[] parameters =
+                {
+                    new SqlParameter("@class", appointmentDto.Class.Id), new SqlParameter("@group", appointmentDto.Group.Id),
+                    new SqlParameter("@teacher", appointmentDto.Teacher.Id), new SqlParameter("@classroom", appointmentDto.ClassRoom),
+                    new SqlParameter("@hour", appointmentDto.Hours),new SqlParameter("@day", appointmentDto.Day),
+                };
+
+                using (IDataReader reader =
+                    DatabaseProvider.ExecuteCommand<IDataReader>(connection, ADDAPPOINTMENT, CommandType.StoredProcedure, parameters))
+                {
+                    if (reader.Read())
+                    {
+
+                        return int.Parse(reader["Id"].ToString());
+                    }
+                    return 0;
+                }
+            }
+        }
 
         public int AddTeacher(TeacherDto teacher)
         {
@@ -103,7 +150,6 @@ namespace WickedWebApi.DAL.DbPop
                 {
                     if (reader.Read())
                     {
-
                         return int.Parse(reader["Id"].ToString());
                     }
                     return 0;
