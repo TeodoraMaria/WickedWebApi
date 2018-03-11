@@ -47,9 +47,16 @@
     <Compile Include="DatabaseRepository.cs" />
     <Compile Include="DbPop\IPopulateRepository.cs" />
     <Compile Include="DbPop\PopulateRepository.cs" />
+    <Compile Include="DtoHelper.cs" />
+    <Compile Include="Feedbacks\FeedbackRepository.cs" />
+    <Compile Include="Feedbacks\IFeedbackRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{5BDACB23-D980-4237-9233-7FA6E8E71C45}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WickedWebApi.TL\WickedWebApi.TL.csproj">
       <Project>{DC8F57CF-4469-4437-B82B-8FF14EAC1187}</Project>
       <Name>WickedWebApi.TL</Name>

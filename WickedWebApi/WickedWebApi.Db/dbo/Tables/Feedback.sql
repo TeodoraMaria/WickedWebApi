@@ -10,7 +10,7 @@
     [Clearness] INT NOT NULL, 
     [Correctness] INT NOT NULL, 
     [Interactivity] INT NOT NULL, 
-    [Comprehesion] INT NOT NULL, 
+    [Comprehension] INT NOT NULL, 
     [Comment] NVARCHAR(250) NULL
 	CONSTRAINT [FK_Feedback_ActualClass] FOREIGN KEY ([ActualClass]) REFERENCES [ActualClass]([Id])
 )

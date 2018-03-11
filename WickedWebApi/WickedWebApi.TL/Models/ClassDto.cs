@@ -15,6 +15,10 @@ namespace WickedWebApi.BL.Models
             ClassType = classType;
         }
 
+        public ClassDto()
+        {
+        }
+
         public int Id { get; set; }
         public SubjectDto Subject { get; set; }
         public ClassTypeEnum ClassType { get; set; }

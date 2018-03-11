@@ -61,6 +61,7 @@
     <Folder Include="dbo" />
     <Folder Include="dbo\Tables" />
     <Folder Include="dbo\StoredProcedures" />
+    <Folder Include="dbo\StoredProcedures\Feedbacks" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Account.sql" />
@@ -86,6 +87,8 @@
     <Build Include="dbo\StoredProcedures\GetLanguageById.sql" />
     <Build Include="dbo\Tables\Feedback.sql" />
     <Build Include="dbo\Tables\ActualClass.sql" />
+    <Build Include="dbo\StoredProcedures\Feedbacks\AddFeedback.sql" />
+    <Build Include="dbo\StoredProcedures\Feedbacks\GetAllFeedbacksForActualClass.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Updates\WickedDatabase1.sql" />

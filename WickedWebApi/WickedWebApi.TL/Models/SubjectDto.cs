@@ -14,6 +14,10 @@ namespace WickedWebApi.BL.Models
             Name = name;
         }
 
+        public SubjectDto()
+        {
+        }
+
         public int Id { get; set; }
         public string Name { get; set; }
 

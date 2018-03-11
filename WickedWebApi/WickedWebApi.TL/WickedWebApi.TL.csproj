@@ -45,8 +45,11 @@
     <Compile Include="Common\RowAppointments.cs" />
     <Compile Include="Common\TimeTable.cs" />
     <Compile Include="Models\AccountDto.cs" />
+    <Compile Include="Models\ActualClassDto.cs" />
     <Compile Include="Models\ClassDto.cs" />
     <Compile Include="Enums\ClassTypeEnum.cs" />
+    <Compile Include="Models\ClassReport.cs" />
+    <Compile Include="Models\FeedbackDto.cs" />
     <Compile Include="Models\GroupDto.cs" />
     <Compile Include="Models\SubjectDto.cs" />
     <Compile Include="Models\Misc\Building.cs" />
