@@ -7,12 +7,20 @@
     <title>title</title>
 </head>
 <body>
-<div>
-    @using (Html.BeginForm("UploadTimeTable", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
-    { 
+    <div>
+        @using (Html.BeginForm("UploadTimeTable", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <label>Time tabel</label>
+        
         <input type="file" name="file" />
         <input type="submit" name="Submit" id="Submit" value="Upload" />
     }
-</div>
+        @using (Html.BeginForm("UploadGroupTable", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <label>Group tabel</label>
+        <input type="file" name="file" />
+        <input type="submit" name="Submit" id="Submit" value="Upload" />
+    }
+    </div>
 </body>
 </html>

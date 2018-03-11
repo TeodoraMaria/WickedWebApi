@@ -87,8 +87,12 @@
     <Build Include="dbo\StoredProcedures\GetLanguageById.sql" />
     <Build Include="dbo\Tables\Feedback.sql" />
     <Build Include="dbo\Tables\ActualClass.sql" />
+<<<<<<< HEAD
     <Build Include="dbo\StoredProcedures\Feedbacks\AddFeedback.sql" />
     <Build Include="dbo\StoredProcedures\Feedbacks\GetAllFeedbacksForActualClass.sql" />
+=======
+    <Build Include="dbo\StoredProcedures\GetAccountByTeacherName.sql" />
+>>>>>>> 187efee52cce8ebf896b9e5fe180063dc7d905c8
   </ItemGroup>
   <ItemGroup>
     <None Include="Updates\WickedDatabase1.sql" />
