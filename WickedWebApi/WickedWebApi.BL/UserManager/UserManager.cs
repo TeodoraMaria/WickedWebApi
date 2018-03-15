@@ -39,13 +39,10 @@ namespace WickedWebApi.BL.AccountManager
         }
 
         public AppointmentDto GetNextAppointmentDtoForStudentDto(List<AppointmentDto> appointmentDtos,
-            StudentDto studentDto,int day,int hour)
+            StudentDto studentDto)
         {
-            /*
-                        return appointmentDtos.Where(appointment=> int.Parse(appointment.Day) > day && int.Parse(appointment.Hours) > hour).Min(a=> day*100+hour-int.Parse(a.Day)*100-int.Parse(a.Hours));
-            */
-
-            
+            int day = (DateTime.Now - new DateTime(2018, 2, 18)).Days %14;
+            int hour = DateTime.Now.Hour;
 
             return appointmentDtos.Where(appointment =>
                 int.Parse(appointment.Day) > day && int.Parse(appointment.Hours) > hour).Aggregate((a, b) =>
