@@ -51,6 +51,8 @@
     <Compile Include="Feedbacks\FeedbackRepository.cs" />
     <Compile Include="Feedbacks\IFeedbackRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Student\IStudentRepository.cs" />
+    <Compile Include="Student\StudentRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">
