@@ -185,7 +185,11 @@ namespace WickedWebApi.BL
                 List<AccountDto> accountDtos = excelWorksheet.Extract<AccountDto>().WithProperty(p => p.Email, "C")
                     .GetData(8, i => !string.IsNullOrEmpty(excelWorksheet.Cells[i, 3].Text)).ToList();
                 string groupName = excelWorksheet.Cells[5,1].Text;
-                groupName = groupName.Split(":".ToCharArray()).First(g=> g.Contains("anul")).Split(",".ToCharArray()).First().Replace(" ","");
+                groupName = groupName.
+                    Split(':')
+                    .First(g=> g.Contains("anul"))
+                    .Split(',')
+                    .First().Trim();
                 GroupTable groupTable = new GroupTable(groupName);
                 int id = 0;
                 accountDtos.ForEach(account=> groupTable.AddStudent(new StudentDto(account)));

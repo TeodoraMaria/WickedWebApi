@@ -27,8 +27,13 @@ namespace WickedWebApi.BL.PopulateManager
             //roupTable.StudentDtos.ForEach(student=>);
         }
 
-        public void AddGroups(GroupTable groupTable){
-            groupTable.GroupDto.Id = _populateRepository.AddGroup(groupTable.GroupDto);
+        public void AddGroups(GroupTable groupTable)
+        {
+            groupTable.GroupDto.Id = _populateRepository.GetGroupByName(groupTable.GroupDto.Name).Id;
+            if (groupTable.GroupDto.Id == -1)
+            {
+                groupTable.GroupDto.Id = _populateRepository.AddGroup(groupTable.GroupDto);
+            }
 
             groupTable.StudentDtos.ForEach(student =>
             {

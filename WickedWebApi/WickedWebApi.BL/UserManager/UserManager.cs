@@ -52,19 +52,19 @@ namespace WickedWebApi.BL.AccountManager
 
                 if (aDay > bDay)
                 {
-                    return a;
+                    return b;
                 }
                 else if (aDay < bDay)
                 {
-                    return b;
+                    return a;
                 }
                 else
                 {
                     int aHour = int.Parse( a.Hours);
                     int bHour = int.Parse(b.Hours);
 
-                    if (aHour > bHour) return a;
-                    else return b;
+                    if (aHour > bHour) return b;
+                    else return a;
                 }
             });
         }

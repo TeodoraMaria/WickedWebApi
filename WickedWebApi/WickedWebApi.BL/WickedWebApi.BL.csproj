@@ -82,6 +82,8 @@
     <Compile Include="PopulateManager\IStudentsPopManager.cs" />
     <Compile Include="PopulateManager\ScheduleManager.cs" />
     <Compile Include="PopulateManager\StudentsPopManager.cs" />
+    <Compile Include="StudentManager\IStudentManager.cs" />
+    <Compile Include="StudentManager\StudentManager.cs" />
     <Compile Include="UserManager\UserManager.cs" />
     <Compile Include="UserManager\IUserManager.cs" />
     <Compile Include="ExcelReader.cs" />
