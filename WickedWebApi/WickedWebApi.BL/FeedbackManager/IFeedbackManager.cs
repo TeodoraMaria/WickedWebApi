@@ -6,6 +6,6 @@ namespace WickedWebApi.BL.FeedbackManager
     {
         //string AddFeedback();
         int Add(FeedbackDto fb);
-        void GetClassReportForActualClass(ActualClassDto actualClass);
+        ClassReport GetClassReportForActualClass(ActualClassDto actualClass);
     }
 }

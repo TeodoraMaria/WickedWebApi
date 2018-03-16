@@ -31,9 +31,38 @@ namespace WickedWebApi.BL.FeedbackManager
             return _feedbackRepository.AddFeedback(fb);
         }
 
-        public void GetClassReportForActualClass(ActualClassDto actualClass)
+        public ClassReport GetClassReportForActualClass(ActualClassDto actualClass)
         {
+            ClassReport cr = new ClassReport();
             IList<FeedbackDto> feedbackDtos = _feedbackRepository.GetAllFeedbacksForActualClass(actualClass.Id);
+
+            foreach (FeedbackDto dto in feedbackDtos)
+            {
+                cr.AttractivenessRating += dto.Attractiveness;
+                cr.ClearnessRating += dto.Clearness;
+                cr.ComprehensionRating += dto.Comprehension;
+                cr.CorrectnessRating += dto.Correctness;
+                cr.HighScientificLevelRating += dto.HighScientificLevel;
+                cr.RigorousScientificLevelRating += dto.RigorousScientificLevel;
+                cr.UsefulnessRating += dto.Usefulness;
+                cr.NoveltyRating += dto.Novelty;
+                cr.InteractivityRating += dto.Interactivity;
+            }
+
+            cr.InteractivityRating /= feedbackDtos.Count;
+            cr.AttractivenessRating /= feedbackDtos.Count;
+            cr.ClearnessRating /= feedbackDtos.Count;
+            cr.ComprehensionRating /= feedbackDtos.Count;
+            cr.CorrectnessRating /= feedbackDtos.Count;
+            cr.HighScientificLevelRating /= feedbackDtos.Count;
+            cr.NoveltyRating /= feedbackDtos.Count;
+            cr.RigorousScientificLevelRating /= feedbackDtos.Count;
+            cr.UsefulnessRating /= feedbackDtos.Count;
+
+            cr.GeneralRating = (cr.InteractivityRating + cr.ClearnessRating + cr.CorrectnessRating +
+                                cr.HighScientificLevelRating + cr.NoveltyRating + cr.RigorousScientificLevelRating +
+                                cr.UsefulnessRating + cr.AttractivenessRating) / 8;
+            return cr;
         }
     }
 }
