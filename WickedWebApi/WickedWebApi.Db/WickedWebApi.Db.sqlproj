@@ -90,10 +90,7 @@
     <Build Include="dbo\StoredProcedures\Feedbacks\AddFeedback.sql" />
     <Build Include="dbo\StoredProcedures\Feedbacks\GetAllFeedbacksForActualClass.sql" />
     <Build Include="dbo\StoredProcedures\GetAccountByTeacherName.sql" />
-<<<<<<< HEAD
-=======
     <Build Include="dbo\StoredProcedures\Feedbacks\AddActualClass.sql" />
->>>>>>> 2005d70d436a0031830356a0cf0dd0b8a29c679d
   </ItemGroup>
   <ItemGroup>
     <None Include="Updates\WickedDatabase1.sql" />
