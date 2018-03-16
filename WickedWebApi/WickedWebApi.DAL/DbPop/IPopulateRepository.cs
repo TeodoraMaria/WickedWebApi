@@ -17,5 +17,7 @@ namespace WickedWebApi.DAL.DbPop
         int AddTeacher(TeacherDto teacher);
         int AddAppointment(AppointmentDto appointmentDto);
         int GetAccountIdByTeacherName(string name);
+
+        GroupDto GetGroupByName(string name);
     }
 }

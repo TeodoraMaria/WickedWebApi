@@ -12,17 +12,32 @@ namespace WickedWebApi.TL.Models
         public DateTime Date { get; set; }
         public TimeSpan Time { get; set; }
 
-        public decimal GeneralTeacherRating { get; set; }
-        public decimal GeneralComprehensionRating { get; set; }
-        public decimal UsefulnessRating { get; set; }
-        public decimal NoveltyRating { get; set; }
-        public decimal HighScientificLevelRating { get; set; }
-        public decimal RigorousScientificLevelRating { get; set; }
-        public decimal AttractivenessRating { get; set; }
-        public decimal ClearnessRating { get; set; }
-        public decimal CorrectnessRating { get; set; }
-        public decimal InteractivityRating { get; set; }
+        public double GeneralRating { get; set; }
+        public double ComprehensionRating { get; set; }
+        public double UsefulnessRating { get; set; }
+        public double NoveltyRating { get; set; }
+        public double HighScientificLevelRating { get; set; }
+        public double RigorousScientificLevelRating { get; set; }
+        public double AttractivenessRating { get; set; }
+        public double ClearnessRating { get; set; }
+        public double CorrectnessRating { get; set; }
+        public double InteractivityRating { get; set; }
 
         public IList<string> Comments { get; set; }
+
+        public ClassReport()
+        {
+            GeneralRating = 0;
+            ComprehensionRating = 0;
+            UsefulnessRating = 0;
+            NoveltyRating = 0;
+            NoveltyRating = 0;
+            HighScientificLevelRating = 0;
+            RigorousScientificLevelRating = 0;
+            AttractivenessRating = 0;
+            ClearnessRating = 0;
+            CorrectnessRating = 0;
+            InteractivityRating = 0;
+        }
     }
 }

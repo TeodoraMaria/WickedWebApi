@@ -15,6 +15,7 @@ namespace WickedWebApi.DAL.DbPop
         private const string ADDAPPOINTMENT = "AddAppointment";
 
         private const string GETACCOUNTIDBYTEACHERNAME = "GetAccountByTeacherName";
+        private const string GETGROUPBYNAME = "GetGroupByName";
 
         public int GetAccountIdByTeacherName(string name)
         {
@@ -204,6 +205,26 @@ namespace WickedWebApi.DAL.DbPop
                     return 0;*/
                 }
             }
+        }
+
+        public GroupDto GetGroupByName(string name)
+        {
+            GroupDto groupDto = new GroupDto(-1,"");
+            using (SqlConnection connection = DatabaseProvider.GetSqlConnection())
+            {
+                SqlParameter[] parameters = { new SqlParameter("@name", name) };
+
+                using (IDataReader reader =
+                    DatabaseProvider.ExecuteCommand<IDataReader>(connection, GETGROUPBYNAME, CommandType.StoredProcedure, parameters))
+                {
+                    while (reader.Read())
+                    {
+                        groupDto = DtoHelper.GetDto<GroupDto>(reader);
+                    }
+                }
+            }
+
+            return groupDto;
         }
     }
 }
