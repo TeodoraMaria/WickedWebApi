@@ -251,6 +251,7 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <None Include="Properties\PublishProfiles\WickedWebApi - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -323,6 +324,14 @@
       <Project>{3c4d4c8c-26bf-4867-b77e-71cc608a6809}</Project>
       <Name>WickedWebApi.BL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WickedWebApi.DAL\WickedWebApi.DAL.csproj">
+      <Project>{f8f7a98c-3c5c-4755-8142-b864a8e5d541}</Project>
+      <Name>WickedWebApi.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WickedWebApi.Db\WickedWebApi.Db.sqlproj">
+      <Project>{4655882e-b04c-4151-896b-16408793e211}</Project>
+      <Name>WickedWebApi.Db</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WickedWebApi.TL\WickedWebApi.TL.csproj">
       <Project>{dc8f57cf-4469-4437-b82b-8ff14eac1187}</Project>
       <Name>WickedWebApi.TL</Name>
@@ -343,7 +352,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>63139</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

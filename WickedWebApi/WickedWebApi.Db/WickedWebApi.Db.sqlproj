@@ -62,7 +62,6 @@
     <Folder Include="dbo\Tables" />
     <Folder Include="dbo\StoredProcedures" />
     <Folder Include="dbo\StoredProcedures\Feedbacks" />
-    <Folder Include="dbo\StoredProcedures\Get" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Account.sql" />
@@ -93,7 +92,6 @@
     <Build Include="dbo\StoredProcedures\GetAccountByTeacherName.sql" />
     <Build Include="dbo\StoredProcedures\Feedbacks\AddActualClass.sql" />
     <Build Include="dbo\StoredProcedures\GetAppointmentsForStudent.sql" />
-    <Build Include="dbo\StoredProcedures\Get\GetGroupByName.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Updates\WickedDatabase1.sql" />

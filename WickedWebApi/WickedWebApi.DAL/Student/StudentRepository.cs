@@ -19,7 +19,7 @@ namespace WickedWebApi.DAL.Student
             IList<AppointmentDto> feedbacks = new List<AppointmentDto>();
             using (SqlConnection connection = DatabaseProvider.GetSqlConnection())
             {
-                SqlParameter[] parameters = { new SqlParameter("@actualClassId", studentId) };
+                SqlParameter[] parameters = { new SqlParameter("@id", studentId) };
 
                 using (IDataReader reader =
                     DatabaseProvider.ExecuteCommand<IDataReader>(connection, GETAPPOINTMENTS, CommandType.StoredProcedure, parameters))
